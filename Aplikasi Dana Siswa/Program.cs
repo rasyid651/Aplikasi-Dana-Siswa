@@ -16,7 +16,7 @@ namespace Aplikasi_Dana_Siswa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new login());
         }
     }
 }

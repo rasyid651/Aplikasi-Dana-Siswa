@@ -1,6 +1,6 @@
 ﻿namespace Aplikasi_Dana_Siswa
 {
-    partial class daftarSiswa
+    partial class danaMasuk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(daftarSiswa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(danaMasuk));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -39,21 +39,27 @@
             this.btnDaftarSiswa = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNamaSiswa = new System.Windows.Forms.TextBox();
-            this.txtKelas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnHapus = new System.Windows.Forms.Button();
-            this.dgvDaftarSiswa = new System.Windows.Forms.DataGridView();
-            this.btnSimpan = new System.Windows.Forms.Button();
-            this.noCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSiswa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNoInduk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNoInduk = new System.Windows.Forms.TextBox();
+            this.cbNoAkun = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnSimpan = new System.Windows.Forms.Button();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.dgvDaftarAkun = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTgl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNoAkun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTujuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colJumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDaftarSiswa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaftarAkun)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -64,7 +70,7 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
             // label1
@@ -75,7 +81,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 24);
-            this.label1.TabIndex = 16;
+            this.label1.TabIndex = 25;
             this.label1.Text = "Admin";
             // 
             // btnLogout
@@ -88,7 +94,7 @@
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(82, 44);
-            this.btnLogout.TabIndex = 15;
+            this.btnLogout.TabIndex = 24;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
@@ -102,7 +108,7 @@
             this.btnLaporan.Margin = new System.Windows.Forms.Padding(2);
             this.btnLaporan.Name = "btnLaporan";
             this.btnLaporan.Size = new System.Drawing.Size(112, 47);
-            this.btnLaporan.TabIndex = 14;
+            this.btnLaporan.TabIndex = 23;
             this.btnLaporan.Text = "Laporan";
             this.btnLaporan.UseVisualStyleBackColor = false;
             // 
@@ -116,7 +122,7 @@
             this.btnDanaKeluar.Margin = new System.Windows.Forms.Padding(2);
             this.btnDanaKeluar.Name = "btnDanaKeluar";
             this.btnDanaKeluar.Size = new System.Drawing.Size(112, 47);
-            this.btnDanaKeluar.TabIndex = 13;
+            this.btnDanaKeluar.TabIndex = 22;
             this.btnDanaKeluar.Text = "Dana Keluar";
             this.btnDanaKeluar.UseVisualStyleBackColor = false;
             // 
@@ -130,7 +136,7 @@
             this.btnDanaMasuk.Margin = new System.Windows.Forms.Padding(2);
             this.btnDanaMasuk.Name = "btnDanaMasuk";
             this.btnDanaMasuk.Size = new System.Drawing.Size(113, 47);
-            this.btnDanaMasuk.TabIndex = 12;
+            this.btnDanaMasuk.TabIndex = 21;
             this.btnDanaMasuk.Text = " Dana Masuk";
             this.btnDanaMasuk.UseVisualStyleBackColor = false;
             // 
@@ -144,7 +150,7 @@
             this.btnDaftarAkun.Margin = new System.Windows.Forms.Padding(2);
             this.btnDaftarAkun.Name = "btnDaftarAkun";
             this.btnDaftarAkun.Size = new System.Drawing.Size(112, 47);
-            this.btnDaftarAkun.TabIndex = 11;
+            this.btnDaftarAkun.TabIndex = 20;
             this.btnDaftarAkun.Text = "Daftar Akun";
             this.btnDaftarAkun.UseVisualStyleBackColor = false;
             // 
@@ -158,7 +164,7 @@
             this.btnDaftarSiswa.Margin = new System.Windows.Forms.Padding(2);
             this.btnDaftarSiswa.Name = "btnDaftarSiswa";
             this.btnDaftarSiswa.Size = new System.Drawing.Size(112, 47);
-            this.btnDaftarSiswa.TabIndex = 10;
+            this.btnDaftarSiswa.TabIndex = 19;
             this.btnDaftarSiswa.Text = "Daftar Siswa";
             this.btnDaftarSiswa.UseVisualStyleBackColor = false;
             // 
@@ -172,7 +178,7 @@
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(103, 47);
-            this.btnDashboard.TabIndex = 9;
+            this.btnDashboard.TabIndex = 18;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
             // 
@@ -180,88 +186,85 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 122);
+            this.label2.Location = new System.Drawing.Point(18, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 18);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Nama Siswa :";
-            // 
-            // txtNamaSiswa
-            // 
-            this.txtNamaSiswa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamaSiswa.Location = new System.Drawing.Point(135, 117);
-            this.txtNamaSiswa.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNamaSiswa.Multiline = true;
-            this.txtNamaSiswa.Name = "txtNamaSiswa";
-            this.txtNamaSiswa.Size = new System.Drawing.Size(212, 30);
-            this.txtNamaSiswa.TabIndex = 19;
-            // 
-            // txtKelas
-            // 
-            this.txtKelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKelas.Location = new System.Drawing.Point(462, 117);
-            this.txtKelas.Margin = new System.Windows.Forms.Padding(2);
-            this.txtKelas.Multiline = true;
-            this.txtKelas.Name = "txtKelas";
-            this.txtKelas.Size = new System.Drawing.Size(212, 30);
-            this.txtKelas.TabIndex = 21;
+            this.label2.Size = new System.Drawing.Size(73, 18);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "No Akun :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(395, 122);
+            this.label3.Location = new System.Drawing.Point(18, 182);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Kelas :";
+            this.label3.Size = new System.Drawing.Size(68, 18);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Tanggal :";
             // 
-            // btnEdit
+            // cbNoAkun
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.Chocolate;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(20, 225);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(104, 36);
-            this.btnEdit.TabIndex = 23;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.cbNoAkun.DisplayMember = "no_akun";
+            this.cbNoAkun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNoAkun.FormattingEnabled = true;
+            this.cbNoAkun.Location = new System.Drawing.Point(98, 119);
+            this.cbNoAkun.Name = "cbNoAkun";
+            this.cbNoAkun.Size = new System.Drawing.Size(218, 24);
+            this.cbNoAkun.TabIndex = 33;
+            this.cbNoAkun.ValueMember = "no_akun";
             // 
-            // btnHapus
+            // dateTimePicker1
             // 
-            this.btnHapus.BackColor = System.Drawing.Color.IndianRed;
-            this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnHapus.ForeColor = System.Drawing.Color.White;
-            this.btnHapus.Location = new System.Drawing.Point(132, 225);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(104, 36);
-            this.btnHapus.TabIndex = 24;
-            this.btnHapus.Text = "Hapus";
-            this.btnHapus.UseVisualStyleBackColor = false;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(98, 182);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
+            this.dateTimePicker1.TabIndex = 34;
             // 
-            // dgvDaftarSiswa
+            // comboBox1
             // 
-            this.dgvDaftarSiswa.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDaftarSiswa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDaftarSiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDaftarSiswa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.noCol,
-            this.colSiswa,
-            this.colKelas,
-            this.colNoInduk});
-            this.dgvDaftarSiswa.Location = new System.Drawing.Point(22, 282);
-            this.dgvDaftarSiswa.Name = "dgvDaftarSiswa";
-            this.dgvDaftarSiswa.Size = new System.Drawing.Size(881, 365);
-            this.dgvDaftarSiswa.TabIndex = 25;
+            this.comboBox1.DisplayMember = "kelas";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(499, 119);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(218, 24);
+            this.comboBox1.TabIndex = 36;
+            this.comboBox1.ValueMember = "kelas";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(435, 122);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 18);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Kelas :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(432, 179);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 18);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Tujuan :";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(502, 176);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(215, 24);
+            this.txtUsername.TabIndex = 39;
             // 
             // btnSimpan
             // 
@@ -269,74 +272,133 @@
             this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSimpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(243, 225);
+            this.btnSimpan.Location = new System.Drawing.Point(242, 291);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(104, 36);
-            this.btnSimpan.TabIndex = 35;
+            this.btnSimpan.TabIndex = 43;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = false;
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
-            // noCol
+            // btnHapus
             // 
-            this.noCol.HeaderText = "No";
-            this.noCol.Name = "noCol";
-            this.noCol.Width = 50;
+            this.btnHapus.BackColor = System.Drawing.Color.IndianRed;
+            this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnHapus.ForeColor = System.Drawing.Color.White;
+            this.btnHapus.Location = new System.Drawing.Point(131, 291);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(104, 36);
+            this.btnHapus.TabIndex = 42;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
             // 
-            // colSiswa
+            // btnEdit
             // 
-            this.colSiswa.HeaderText = "Nama Siswa";
-            this.colSiswa.Name = "colSiswa";
-            this.colSiswa.Width = 120;
+            this.btnEdit.BackColor = System.Drawing.Color.Chocolate;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(19, 291);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(104, 36);
+            this.btnEdit.TabIndex = 41;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // dgvDaftarAkun
+            // 
+            this.dgvDaftarAkun.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDaftarAkun.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDaftarAkun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDaftarAkun.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNo,
+            this.colTgl,
+            this.colNoAkun,
+            this.colKelas,
+            this.colTujuan,
+            this.colJumlah});
+            this.dgvDaftarAkun.Location = new System.Drawing.Point(21, 342);
+            this.dgvDaftarAkun.Name = "dgvDaftarAkun";
+            this.dgvDaftarAkun.Size = new System.Drawing.Size(881, 365);
+            this.dgvDaftarAkun.TabIndex = 44;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(502, 236);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(215, 24);
+            this.textBox1.TabIndex = 46;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(432, 239);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 18);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Jumlah :";
+            // 
+            // colNo
+            // 
+            this.colNo.HeaderText = "No";
+            this.colNo.Name = "colNo";
+            // 
+            // colTgl
+            // 
+            this.colTgl.DataPropertyName = "tgl";
+            this.colTgl.HeaderText = "Tanggal";
+            this.colTgl.Name = "colTgl";
+            // 
+            // colNoAkun
+            // 
+            this.colNoAkun.DataPropertyName = "no_akun";
+            this.colNoAkun.HeaderText = "No Akun";
+            this.colNoAkun.Name = "colNoAkun";
             // 
             // colKelas
             // 
-            this.colKelas.HeaderText = " Kelas";
+            this.colKelas.DataPropertyName = "kelas";
+            this.colKelas.HeaderText = "Kelas";
             this.colKelas.Name = "colKelas";
             // 
-            // colNoInduk
+            // colTujuan
             // 
-            this.colNoInduk.HeaderText = "Nomor Induk";
-            this.colNoInduk.Name = "colNoInduk";
-            this.colNoInduk.Width = 150;
+            this.colTujuan.DataPropertyName = "Tujuan";
+            this.colTujuan.HeaderText = "Tujuan";
+            this.colTujuan.Name = "colTujuan";
             // 
-            // txtNoInduk
+            // colJumlah
             // 
-            this.txtNoInduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoInduk.Location = new System.Drawing.Point(135, 173);
-            this.txtNoInduk.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNoInduk.Multiline = true;
-            this.txtNoInduk.Name = "txtNoInduk";
-            this.txtNoInduk.Size = new System.Drawing.Size(212, 30);
-            this.txtNoInduk.TabIndex = 37;
+            this.colJumlah.DataPropertyName = "jumlah";
+            this.colJumlah.HeaderText = "Jumlah";
+            this.colJumlah.Name = "colJumlah";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 177);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 18);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Nomor Induk :";
-            // 
-            // daftarSiswa
+            // danaMasuk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(915, 687);
-            this.Controls.Add(this.txtNoInduk);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(915, 717);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dgvDaftarAkun);
             this.Controls.Add(this.btnSimpan);
-            this.Controls.Add(this.dgvDaftarSiswa);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.txtKelas);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cbNoAkun);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNamaSiswa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -347,12 +409,11 @@
             this.Controls.Add(this.btnDaftarAkun);
             this.Controls.Add(this.btnDaftarSiswa);
             this.Controls.Add(this.btnDashboard);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "daftarSiswa";
-            this.Text = "Daftar SIswa - Aplikasi Dana Siswa";
-            this.Load += new System.EventHandler(this.daftarSiswa_Load);
+            this.Name = "danaMasuk";
+            this.Text = "Dana Masuk - Aplikasi Dana Siswa";
+            this.Load += new System.EventHandler(this.danaMasuk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDaftarSiswa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaftarAkun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,18 +431,24 @@
         private System.Windows.Forms.Button btnDaftarSiswa;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNamaSiswa;
-        private System.Windows.Forms.TextBox txtKelas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnHapus;
-        private System.Windows.Forms.DataGridView dgvDaftarSiswa;
-        private System.Windows.Forms.Button btnSimpan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSiswa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colKelas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNoInduk;
-        private System.Windows.Forms.TextBox txtNoInduk;
+        private System.Windows.Forms.ComboBox cbNoAkun;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnSimpan;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.DataGridView dgvDaftarAkun;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTgl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNoAkun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKelas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTujuan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colJumlah;
     }
 }
