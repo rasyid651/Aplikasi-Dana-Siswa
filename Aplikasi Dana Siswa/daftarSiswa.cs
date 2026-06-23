@@ -42,6 +42,9 @@ namespace Aplikasi_Dana_Siswa
                             adapter.Fill(dts);
                             dgvDaftarSiswa.DataSource = dts;
 
+                            if (dgvDaftarSiswa.Columns["id_siswa"] != null)
+                                dgvDaftarSiswa.Columns["id_siswa"].Visible = false;
+
                             TambahNoUrut();
                         }
                     }
@@ -70,6 +73,7 @@ namespace Aplikasi_Dana_Siswa
             if (string.IsNullOrEmpty(txtNamaSiswa.Text) || string.IsNullOrEmpty(txtKelas.Text))
             {
                 MessageBox.Show("Form Nama siswa atau Kelas tidak boleh kosong!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
             }
 
             try
@@ -82,32 +86,36 @@ namespace Aplikasi_Dana_Siswa
                     if (isEditMode)
                     {
                         // query edit data
-                        query = "UPDATE tbl_siswa SET nama_akun = @nakun, kelas = @kelas, nomor_induk = @noduk WHERE id_siswa = @id_siswa";
+                        query = "UPDATE tbl_siswa SET nama_siswa = @nasis, kelas = @kelas, nomor_induk = @noduk WHERE id_siswa = @id_siswa";
                     }
                     else
                     {
                         // tambah
-                        query = "INSERT INTO tbl_siswa (nama_akun,kelas,nomor_induk) VALUES (@nakun,@kelas,@noduk)";
+                        query = "INSERT INTO tbl_siswa (nama_siswa,kelas,nomor_induk) VALUES (@nasis,@kelas,@noduk)";
                     }
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         // mengirim data ke query
-                        cmd.Parameters.AddWithValue("@nakun", txtNamaSiswa.Text);
+                        cmd.Parameters.AddWithValue("@nasis", txtNamaSiswa.Text);
                         cmd.Parameters.AddWithValue("@kelas", txtKelas.Text);
-                        cmd.Parameters.AddWithValue("noduk", txtNoInduk.Text);
+                        cmd.Parameters.AddWithValue("@noduk", txtNoInduk.Text);
 
                         if (isEditMode)
                         {
                             // patokan id pertamannya
-                            cmd.Parameters.AddWithValue("id_user", txtNamaSiswa.Tag);
+                            cmd.Parameters.AddWithValue("@id_siswa", txtNamaSiswa.Tag);
                         }
 
                         int hasil = cmd.ExecuteNonQuery();
 
                         if (hasil > 0)
                         {
-                            MessageBox.Show("Siswa berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            string pesan = isEditMode
+                                ? "Data Siswa Berhasil diupdate!"
+                                : "Data Siswa Berhasil ditambahkan!";
+
+                            MessageBox.Show(pesan, "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             txtNamaSiswa.Clear();
                             txtKelas.Clear();
@@ -116,6 +124,7 @@ namespace Aplikasi_Dana_Siswa
                             isEditMode = false;
 
                             btnSimpan.Text = "Simpan";
+                            TampilkanDataUser();
                         }
                     }
                     
@@ -178,6 +187,54 @@ namespace Aplikasi_Dana_Siswa
             {
                 MessageBox.Show("Plih baris terlebih dahulu!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+
+            // ambil data yang ingin dihapus
+            int IdSiswa = Convert.ToInt32(dgvDaftarSiswa.CurrentRow.Cells["id_siswa"].Value);
+            string namaSiswa = dgvDaftarSiswa.CurrentRow.Cells["colSiswa"].Value.ToString();
+
+            // konfirmasi hapus 
+            DialogResult konfirmasi = MessageBox.Show("Yakin ingin menghapus data?",
+                "Konfirmasi hapus",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            // jika hapus
+            if (konfirmasi == DialogResult.Yes)
+            {
+                try
+                {
+                    using (SqlConnection con = new SqlConnection(conDb))
+                    {
+                        con.Open();
+                        string query = "DELETE FROM tbl_siswa WHERE id_siswa = @id_siswa";
+
+                        using (SqlCommand cmd = new SqlCommand(query, con))
+                        {
+                            cmd.Parameters.AddWithValue("@id_siswa", IdSiswa);
+                            cmd.ExecuteNonQuery(); // mengirim perintah query
+
+                        }
+
+                        MessageBox.Show("Data berhasil dihapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // refresh data
+                        TampilkanDataUser();
+                    }
+                }catch (Exception ex)
+                {
+                    MessageBox.Show("Data gagal dihapus :" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            TampilkanDataUser();
+        }
+
+        private void btnDaftarAkun_Click(object sender, EventArgs e)
+        {
+            daftarAkun keDaftarAkun = new daftarAkun();
+            keDaftarAkun.Show();
+            this.Hide();
         }
     }
 }
